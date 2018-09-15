@@ -12,13 +12,13 @@ import java.util.List;
 public interface IssueDao {
 
         @Query("SELECT * FROM issue")
-        List<com.example.mahgolfathi.myfirstapp.Issue> getAll();
+        List<com.example.mahgolfathi.todolist.Issue> getAll();
 
 
         @Insert
-        void insertAll(com.example.mahgolfathi.myfirstapp.Issue... issues);
+        void insertAll(com.example.mahgolfathi.todolist.Issue... issues);
 
         @Delete
-        void delete(com.example.mahgolfathi.myfirstapp.Issue issues);
+        void delete(com.example.mahgolfathi.todolist.Issue issues);
 
 }
