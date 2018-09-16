@@ -8,3 +8,4 @@ import android.arch.persistence.room.RoomDatabase;
 public abstract class DataBase extends RoomDatabase {
     public abstract IssueDao daoAccess();
 }
+

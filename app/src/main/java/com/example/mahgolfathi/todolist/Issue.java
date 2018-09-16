@@ -21,7 +21,7 @@ public class Issue {
     }
 
     @ColumnInfo(name = "tasks")
-    private ArrayList<Task> tasks = new ArrayList<Task>();
+    private String tasks;
     @ColumnInfo(name = "title")
     private String title;
 
@@ -33,14 +33,13 @@ public class Issue {
         return title;
     }
 
-    public void addTask(String taskString) {
-        Task newTask = new Task();
-        newTask.setTitle(taskString);
-        this.tasks.add(newTask);
+    public void setTasks(String tasks) {
+        this.tasks = tasks;
     }
 
-    public ArrayList<Task> getTasks() {
+    public String getTasks() {
         return tasks;
     }
+
 
 }

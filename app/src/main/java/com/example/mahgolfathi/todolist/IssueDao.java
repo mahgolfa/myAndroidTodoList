@@ -4,7 +4,9 @@ import android.arch.persistence.room.Dao;
 import android.arch.persistence.room.Delete;
 import android.arch.persistence.room.Insert;
 import android.arch.persistence.room.Query;
+import android.arch.persistence.room.Update;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Dao
@@ -16,10 +18,16 @@ public interface IssueDao {
     @Insert
     void insert(Issue... issue);
 
-    @Query("SELECT * FROM Issue WHERE title = :title")
-    Issue fetchOneIssueByTitle(String title);
+    @Query("SELECT * FROM Issue WHERE id = :id")
+    Issue fetchIssueById(int id);
 
     @Delete
     void delete(Issue issue);
+
+    @Update
+    void updateIssue (Issue issue);
+
+    @Query("UPDATE Issue SET tasks=:updatedTasks WHERE id = :id")
+    void update(String updatedTasks, int id);
 
 }

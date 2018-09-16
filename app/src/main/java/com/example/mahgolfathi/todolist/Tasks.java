@@ -1,9 +1,11 @@
 package com.example.mahgolfathi.todolist;
 
+import android.arch.persistence.room.Room;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -16,49 +18,93 @@ import java.util.List;
 
 public class Tasks extends AppCompatActivity {
 
-    String[] values = new String[]{"item1", "item2", "item3",
-            "item4"};
 
+    private static final String DATABASE_NAME = "issues_db";
+    private DataBase issueDataBase;
+    private ArrayList<String> tasks = new ArrayList<String>();
+    private Context context;
+    private int issueId;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tasks);
         Intent intent = getIntent();
-        //String message = intent.getStringExtra(MainActivity.extra);
-
-        final ListView listview = (ListView) findViewById(R.id.tasksListView);
-
-        final ArrayList<String> list = new ArrayList<String>();
-        for (int i = 0; i < values.length; ++i) {
-            list.add(values[i]);
-        }
-        final StableArrayAdapter adapter = new StableArrayAdapter(this,
-                android.R.layout.simple_list_item_1, list);
-        listview.setAdapter(adapter);
-
-        listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-
+        issueId = intent.getIntExtra("selectedIssue",0);
+        issueDataBase = Room.databaseBuilder(getApplicationContext(),
+                DataBase.class, DATABASE_NAME).fallbackToDestructiveMigration().build();
+        context = this;
+        new Thread(new Runnable() {
             @Override
-            public void onItemClick(AdapterView<?> parent, final View view,
-                                    int position, long id) {
-                final String item = (String) parent.getItemAtPosition(position);
-                view.animate().setDuration(2000).alpha(0)
-                        .withEndAction(new Runnable() {
-                            @Override
-                            public void run() {
-                                list.remove(item);
-                                adapter.notifyDataSetChanged();
-                                view.setAlpha(1);
-                            }
-                        });
+            public void run() {
+                final ArrayList<String>  allTasks = Converters.fromString(issueDataBase.daoAccess().fetchIssueById(issueId).getTasks());
+                if (allTasks!= null){
+                    tasks = allTasks;
+                }
+                loadTasks();
             }
+        }).start();
 
-        });
+
     }
+
+    public void loadTasks() {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                EditText editText = findViewById(R.id.textInput);
+                editText.setText("");
+
+                final ListView listview = (ListView) findViewById(R.id.tasksListView);
+                final ArrayList<String> list = tasks;
+                final StableArrayAdapter adapter = new StableArrayAdapter(context,
+                        android.R.layout.simple_list_item_1, list);
+                listview.setAdapter(adapter);
+
+                listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, final View view,
+                                            int position, long id) {
+                        final String item = (String) parent.getItemAtPosition(position);
+                        view.animate().setDuration(2000).alpha(0)
+                                .withEndAction(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        list.remove(item);
+                                        adapter.notifyDataSetChanged();
+                                        view.setAlpha(1);
+                                    }
+                                });
+                    }
+
+                });
+             }
+        });
+
+    }
+
 
     public void addTask(View v) {
         EditText editText = findViewById(R.id.textInput);
         String newTask = String.valueOf(editText.getText());
+        tasks.add(newTask);
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                issueDataBase.daoAccess().fetchIssueById(issueId).setTasks(Converters.fromArrayList(tasks));
+                issueDataBase.daoAccess().update(Converters.fromArrayList(tasks),issueId);
+                String message = issueDataBase.daoAccess().fetchIssueById(issueId).getTasks();
+                if(message == null) {
+                    Log.d("tasks", "NULLLLLLL");
+                }
+                final ArrayList<String>  allTasks = Converters.fromString(issueDataBase.daoAccess().fetchIssueById(issueId).getTasks());
+                if (allTasks!= null){
+                    tasks = allTasks;
+                    Log.d("correct", "updated!");
+                }
+                loadTasks();
+            }
+        }).start();
 
     }
 
@@ -69,9 +115,11 @@ public class Tasks extends AppCompatActivity {
         public StableArrayAdapter(Context context, int textViewResourceId,
                                   List<String> objects) {
             super(context, textViewResourceId, objects);
-            for (int i = 0; i < objects.size(); ++i) {
-                mIdMap.put(objects.get(i), i);
-            }
+
+                for (int i = 0; i < objects.size(); ++i) {
+                    mIdMap.put(objects.get(i), i);
+                }
+
         }
 
         @Override
