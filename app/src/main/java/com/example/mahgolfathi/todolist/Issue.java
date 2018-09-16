@@ -21,7 +21,7 @@ public class Issue {
     }
 
     @ColumnInfo(name = "tasks")
-    private ArrayList<Task> tasksStrings = new ArrayList<Task>();
+    private ArrayList<Task> tasks = new ArrayList<Task>();
     @ColumnInfo(name = "title")
     private String title;
 
