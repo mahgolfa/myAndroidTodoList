@@ -13,21 +13,13 @@
     <list default="true" id="b2c7530d-94f9-4674-9700-c50f3123458e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/resourceHashesCache.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/resourceHashesCache.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/jarAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/jarAnalysis.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskJars.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskJars.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/mahgolfathi/todolist/DataBase.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/mahgolfathi/todolist/DataBase.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/mahgolfathi/todolist/Issue.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/mahgolfathi/todolist/Issue.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/mahgolfathi/todolist/IssueDao.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/mahgolfathi/todolist/IssueDao.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/mahgolfathi/todolist/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/mahgolfathi/todolist/MainActivity.java" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/mahgolfathi/todolist/Tasks.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/mahgolfathi/todolist/Tasks.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -76,8 +68,8 @@
       <file leaf-file-name="Tasks.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mahgolfathi/todolist/Tasks.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="98" column="17" lean-forward="true" selection-start-line="98" selection-start-column="17" selection-end-line="98" selection-end-column="17" />
+            <state relative-caret-position="176">
+              <caret line="95" column="108" lean-forward="false" selection-start-line="95" selection-start-column="108" selection-end-line="95" selection-end-column="108" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#686#694#0" expanded="true" />
@@ -89,10 +81,10 @@
                 <element signature="e#3005#3006#0" expanded="true" />
                 <element signature="e#3048#3049#0" expanded="true" />
                 <element signature="e#3075#3076#0" expanded="true" />
-                <element signature="e#3288#4092#0" expanded="true" />
-                <element signature="e#4091#4092#0" expanded="true" />
-                <element signature="e#4799#4800#0" expanded="true" />
-                <element signature="e#4834#4835#0" expanded="true" />
+                <element signature="e#3288#3720#0" expanded="true" />
+                <element signature="e#3719#3720#0" expanded="true" />
+                <element signature="e#4427#4428#0" expanded="true" />
+                <element signature="e#4462#4463#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -2618,10 +2610,10 @@
             <element signature="e#3005#3006#0" expanded="true" />
             <element signature="e#3048#3049#0" expanded="true" />
             <element signature="e#3075#3076#0" expanded="true" />
-            <element signature="e#3288#4092#0" expanded="true" />
-            <element signature="e#4091#4092#0" expanded="true" />
-            <element signature="e#4799#4800#0" expanded="true" />
-            <element signature="e#4834#4835#0" expanded="true" />
+            <element signature="e#3288#3720#0" expanded="true" />
+            <element signature="e#3719#3720#0" expanded="true" />
+            <element signature="e#4427#4428#0" expanded="true" />
+            <element signature="e#4462#4463#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2777,10 +2769,10 @@
             <element signature="e#3005#3006#0" expanded="true" />
             <element signature="e#3048#3049#0" expanded="true" />
             <element signature="e#3075#3076#0" expanded="true" />
-            <element signature="e#3288#4092#0" expanded="true" />
-            <element signature="e#4091#4092#0" expanded="true" />
-            <element signature="e#4799#4800#0" expanded="true" />
-            <element signature="e#4834#4835#0" expanded="true" />
+            <element signature="e#3288#3720#0" expanded="true" />
+            <element signature="e#3719#3720#0" expanded="true" />
+            <element signature="e#4427#4428#0" expanded="true" />
+            <element signature="e#4462#4463#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3050,8 +3042,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mahgolfathi/todolist/Tasks.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="98" column="17" lean-forward="true" selection-start-line="98" selection-start-column="17" selection-end-line="98" selection-end-column="17" />
+        <state relative-caret-position="176">
+          <caret line="95" column="108" lean-forward="false" selection-start-line="95" selection-start-column="108" selection-end-line="95" selection-end-column="108" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#686#694#0" expanded="true" />
@@ -3063,10 +3055,10 @@
             <element signature="e#3005#3006#0" expanded="true" />
             <element signature="e#3048#3049#0" expanded="true" />
             <element signature="e#3075#3076#0" expanded="true" />
-            <element signature="e#3288#4092#0" expanded="true" />
-            <element signature="e#4091#4092#0" expanded="true" />
-            <element signature="e#4799#4800#0" expanded="true" />
-            <element signature="e#4834#4835#0" expanded="true" />
+            <element signature="e#3288#3720#0" expanded="true" />
+            <element signature="e#3719#3720#0" expanded="true" />
+            <element signature="e#4427#4428#0" expanded="true" />
+            <element signature="e#4462#4463#0" expanded="true" />
           </folding>
         </state>
       </provider>

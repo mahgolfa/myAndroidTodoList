@@ -93,15 +93,7 @@ public class Tasks extends AppCompatActivity {
             public void run() {
                 issueDataBase.daoAccess().fetchIssueById(issueId).setTasks(Converters.fromArrayList(tasks));
                 issueDataBase.daoAccess().update(Converters.fromArrayList(tasks),issueId);
-                String message = issueDataBase.daoAccess().fetchIssueById(issueId).getTasks();
-                if(message == null) {
-                    Log.d("tasks", "NULLLLLLL");
-                }
-                final ArrayList<String>  allTasks = Converters.fromString(issueDataBase.daoAccess().fetchIssueById(issueId).getTasks());
-                if (allTasks!= null){
-                    tasks = allTasks;
-                    Log.d("correct", "updated!");
-                }
+                tasks = Converters.fromString(issueDataBase.daoAccess().fetchIssueById(issueId).getTasks());
                 loadTasks();
             }
         }).start();
