@@ -20,6 +20,8 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/mahgolfathi/todolist/IssueDao.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/mahgolfathi/todolist/IssueDao.java" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/mahgolfathi/todolist/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/mahgolfathi/todolist/MainActivity.java" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/mahgolfathi/todolist/Tasks.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/mahgolfathi/todolist/Tasks.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,20 +48,19 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mahgolfathi/todolist/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
-              <caret line="73" column="54" lean-forward="false" selection-start-line="73" selection-start-column="41" selection-end-line="73" selection-end-column="54" />
+            <state relative-caret-position="171">
+              <caret line="63" column="85" lean-forward="false" selection-start-line="63" selection-start-column="85" selection-end-line="63" selection-end-column="85" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1071#1259#0" expanded="true" />
                 <element signature="e#1258#1259#0" expanded="true" />
-                <element signature="e#1332#2728#0" expanded="true" />
+                <element signature="e#1332#2709#0" expanded="true" />
                 <element signature="e#1661#1669#0" expanded="true" />
-                <element signature="e#2146#2702#0" expanded="true" />
-                <element signature="e#2701#2702#0" expanded="true" />
-                <element signature="e#2727#2728#0" expanded="true" />
-                <element signature="e#2997#3245#0" expanded="true" />
-                <element signature="e#3244#3245#0" expanded="true" />
-                <element signature="e#3387#3404#0" expanded="true" />
+                <element signature="e#2682#2683#0" expanded="true" />
+                <element signature="e#2708#2709#0" expanded="true" />
+                <element signature="e#2978#3226#0" expanded="true" />
+                <element signature="e#3225#3226#0" expanded="true" />
+                <element signature="e#3368#3385#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -68,23 +69,25 @@
       <file leaf-file-name="Tasks.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mahgolfathi/todolist/Tasks.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="95" column="108" lean-forward="false" selection-start-line="95" selection-start-column="108" selection-end-line="95" selection-end-column="108" />
+            <state relative-caret-position="211">
+              <caret line="72" column="55" lean-forward="false" selection-start-line="72" selection-start-column="55" selection-end-line="72" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#686#694#0" expanded="true" />
-                <element signature="e#1212#1566#0" expanded="true" />
-                <element signature="e#1565#1566#0" expanded="true" />
-                <element signature="e#1638#3076#0" expanded="true" />
-                <element signature="e#2201#3049#0" expanded="true" />
-                <element signature="e#2627#3006#0" expanded="true" />
-                <element signature="e#3005#3006#0" expanded="true" />
-                <element signature="e#3048#3049#0" expanded="true" />
-                <element signature="e#3075#3076#0" expanded="true" />
-                <element signature="e#3288#3720#0" expanded="true" />
-                <element signature="e#3719#3720#0" expanded="true" />
-                <element signature="e#4427#4428#0" expanded="true" />
-                <element signature="e#4462#4463#0" expanded="true" />
+                <element signature="e#1214#1569#0" expanded="true" />
+                <element signature="e#1568#1569#0" expanded="true" />
+                <element signature="e#1641#3676#0" expanded="true" />
+                <element signature="e#2152#3650#0" expanded="true" />
+                <element signature="e#2578#3607#0" expanded="true" />
+                <element signature="e#2938#3525#0" expanded="true" />
+                <element signature="e#3524#3525#0" expanded="true" />
+                <element signature="e#3606#3607#0" expanded="true" />
+                <element signature="e#3649#3650#0" expanded="true" />
+                <element signature="e#3675#3676#0" expanded="true" />
+                <element signature="e#3888#4321#0" expanded="true" />
+                <element signature="e#4320#4321#0" expanded="true" />
+                <element signature="e#5016#5017#0" expanded="true" />
+                <element signature="e#5051#5052#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -103,8 +106,8 @@
       <file leaf-file-name="IssueDao.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mahgolfathi/todolist/IssueDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="18" column="32" lean-forward="false" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+            <state relative-caret-position="224">
+              <caret line="24" column="29" lean-forward="false" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -2231,8 +2234,8 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/mahgolfathi/todolist/Converters.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/mahgolfathi/todolist/DataBase.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/mahgolfathi/todolist/Issue.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/mahgolfathi/todolist/IssueDao.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/mahgolfathi/todolist/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/mahgolfathi/todolist/IssueDao.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/mahgolfathi/todolist/Tasks.java" />
       </list>
     </option>
@@ -2602,18 +2605,20 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#686#694#0" expanded="true" />
-            <element signature="e#1212#1566#0" expanded="true" />
-            <element signature="e#1565#1566#0" expanded="true" />
-            <element signature="e#1638#3076#0" expanded="true" />
-            <element signature="e#2201#3049#0" expanded="true" />
-            <element signature="e#2627#3006#0" expanded="true" />
-            <element signature="e#3005#3006#0" expanded="true" />
-            <element signature="e#3048#3049#0" expanded="true" />
-            <element signature="e#3075#3076#0" expanded="true" />
-            <element signature="e#3288#3720#0" expanded="true" />
-            <element signature="e#3719#3720#0" expanded="true" />
-            <element signature="e#4427#4428#0" expanded="true" />
-            <element signature="e#4462#4463#0" expanded="true" />
+            <element signature="e#1214#1569#0" expanded="true" />
+            <element signature="e#1568#1569#0" expanded="true" />
+            <element signature="e#1641#3676#0" expanded="true" />
+            <element signature="e#2152#3650#0" expanded="true" />
+            <element signature="e#2578#3607#0" expanded="true" />
+            <element signature="e#2938#3525#0" expanded="true" />
+            <element signature="e#3524#3525#0" expanded="true" />
+            <element signature="e#3606#3607#0" expanded="true" />
+            <element signature="e#3649#3650#0" expanded="true" />
+            <element signature="e#3675#3676#0" expanded="true" />
+            <element signature="e#3888#4321#0" expanded="true" />
+            <element signature="e#4320#4321#0" expanded="true" />
+            <element signature="e#5016#5017#0" expanded="true" />
+            <element signature="e#5051#5052#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2703,14 +2708,13 @@
             <element signature="imports" expanded="true" />
             <element signature="e#1071#1259#0" expanded="true" />
             <element signature="e#1258#1259#0" expanded="true" />
-            <element signature="e#1332#2728#0" expanded="true" />
+            <element signature="e#1332#2709#0" expanded="true" />
             <element signature="e#1661#1669#0" expanded="true" />
-            <element signature="e#2146#2702#0" expanded="true" />
-            <element signature="e#2701#2702#0" expanded="true" />
-            <element signature="e#2727#2728#0" expanded="true" />
-            <element signature="e#2997#3245#0" expanded="true" />
-            <element signature="e#3244#3245#0" expanded="true" />
-            <element signature="e#3387#3404#0" expanded="true" />
+            <element signature="e#2682#2683#0" expanded="true" />
+            <element signature="e#2708#2709#0" expanded="true" />
+            <element signature="e#2978#3226#0" expanded="true" />
+            <element signature="e#3225#3226#0" expanded="true" />
+            <element signature="e#3368#3385#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2731,14 +2735,13 @@
             <element signature="imports" expanded="true" />
             <element signature="e#1071#1259#0" expanded="true" />
             <element signature="e#1258#1259#0" expanded="true" />
-            <element signature="e#1332#2728#0" expanded="true" />
+            <element signature="e#1332#2709#0" expanded="true" />
             <element signature="e#1661#1669#0" expanded="true" />
-            <element signature="e#2146#2702#0" expanded="true" />
-            <element signature="e#2701#2702#0" expanded="true" />
-            <element signature="e#2727#2728#0" expanded="true" />
-            <element signature="e#2997#3245#0" expanded="true" />
-            <element signature="e#3244#3245#0" expanded="true" />
-            <element signature="e#3387#3404#0" expanded="true" />
+            <element signature="e#2682#2683#0" expanded="true" />
+            <element signature="e#2708#2709#0" expanded="true" />
+            <element signature="e#2978#3226#0" expanded="true" />
+            <element signature="e#3225#3226#0" expanded="true" />
+            <element signature="e#3368#3385#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2761,18 +2764,20 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#686#694#0" expanded="true" />
-            <element signature="e#1212#1566#0" expanded="true" />
-            <element signature="e#1565#1566#0" expanded="true" />
-            <element signature="e#1638#3076#0" expanded="true" />
-            <element signature="e#2201#3049#0" expanded="true" />
-            <element signature="e#2627#3006#0" expanded="true" />
-            <element signature="e#3005#3006#0" expanded="true" />
-            <element signature="e#3048#3049#0" expanded="true" />
-            <element signature="e#3075#3076#0" expanded="true" />
-            <element signature="e#3288#3720#0" expanded="true" />
-            <element signature="e#3719#3720#0" expanded="true" />
-            <element signature="e#4427#4428#0" expanded="true" />
-            <element signature="e#4462#4463#0" expanded="true" />
+            <element signature="e#1214#1569#0" expanded="true" />
+            <element signature="e#1568#1569#0" expanded="true" />
+            <element signature="e#1641#3676#0" expanded="true" />
+            <element signature="e#2152#3650#0" expanded="true" />
+            <element signature="e#2578#3607#0" expanded="true" />
+            <element signature="e#2938#3525#0" expanded="true" />
+            <element signature="e#3524#3525#0" expanded="true" />
+            <element signature="e#3606#3607#0" expanded="true" />
+            <element signature="e#3649#3650#0" expanded="true" />
+            <element signature="e#3675#3676#0" expanded="true" />
+            <element signature="e#3888#4321#0" expanded="true" />
+            <element signature="e#4320#4321#0" expanded="true" />
+            <element signature="e#5016#5017#0" expanded="true" />
+            <element signature="e#5051#5052#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3010,55 +3015,56 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mahgolfathi/todolist/IssueDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="18" column="32" lean-forward="false" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mahgolfathi/todolist/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="73" column="54" lean-forward="false" selection-start-line="73" selection-start-column="41" selection-end-line="73" selection-end-column="54" />
+        <state relative-caret-position="171">
+          <caret line="63" column="85" lean-forward="false" selection-start-line="63" selection-start-column="85" selection-end-line="63" selection-end-column="85" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1071#1259#0" expanded="true" />
             <element signature="e#1258#1259#0" expanded="true" />
-            <element signature="e#1332#2728#0" expanded="true" />
+            <element signature="e#1332#2709#0" expanded="true" />
             <element signature="e#1661#1669#0" expanded="true" />
-            <element signature="e#2146#2702#0" expanded="true" />
-            <element signature="e#2701#2702#0" expanded="true" />
-            <element signature="e#2727#2728#0" expanded="true" />
-            <element signature="e#2997#3245#0" expanded="true" />
-            <element signature="e#3244#3245#0" expanded="true" />
-            <element signature="e#3387#3404#0" expanded="true" />
+            <element signature="e#2682#2683#0" expanded="true" />
+            <element signature="e#2708#2709#0" expanded="true" />
+            <element signature="e#2978#3226#0" expanded="true" />
+            <element signature="e#3225#3226#0" expanded="true" />
+            <element signature="e#3368#3385#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mahgolfathi/todolist/IssueDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="24" column="29" lean-forward="false" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mahgolfathi/todolist/Tasks.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="95" column="108" lean-forward="false" selection-start-line="95" selection-start-column="108" selection-end-line="95" selection-end-column="108" />
+        <state relative-caret-position="211">
+          <caret line="72" column="55" lean-forward="false" selection-start-line="72" selection-start-column="55" selection-end-line="72" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#686#694#0" expanded="true" />
-            <element signature="e#1212#1566#0" expanded="true" />
-            <element signature="e#1565#1566#0" expanded="true" />
-            <element signature="e#1638#3076#0" expanded="true" />
-            <element signature="e#2201#3049#0" expanded="true" />
-            <element signature="e#2627#3006#0" expanded="true" />
-            <element signature="e#3005#3006#0" expanded="true" />
-            <element signature="e#3048#3049#0" expanded="true" />
-            <element signature="e#3075#3076#0" expanded="true" />
-            <element signature="e#3288#3720#0" expanded="true" />
-            <element signature="e#3719#3720#0" expanded="true" />
-            <element signature="e#4427#4428#0" expanded="true" />
-            <element signature="e#4462#4463#0" expanded="true" />
+            <element signature="e#1214#1569#0" expanded="true" />
+            <element signature="e#1568#1569#0" expanded="true" />
+            <element signature="e#1641#3676#0" expanded="true" />
+            <element signature="e#2152#3650#0" expanded="true" />
+            <element signature="e#2578#3607#0" expanded="true" />
+            <element signature="e#2938#3525#0" expanded="true" />
+            <element signature="e#3524#3525#0" expanded="true" />
+            <element signature="e#3606#3607#0" expanded="true" />
+            <element signature="e#3649#3650#0" expanded="true" />
+            <element signature="e#3675#3676#0" expanded="true" />
+            <element signature="e#3888#4321#0" expanded="true" />
+            <element signature="e#4320#4321#0" expanded="true" />
+            <element signature="e#5016#5017#0" expanded="true" />
+            <element signature="e#5051#5052#0" expanded="true" />
           </folding>
         </state>
       </provider>

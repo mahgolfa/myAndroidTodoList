@@ -61,17 +61,13 @@ public class MainActivity extends AppCompatActivity {
                         android.R.layout.simple_list_item_1, list);
                 listview.setAdapter(adapter);
 
-                listview.setOnItemClickListener(new AdapterView.OnItemClickListener()
-
-                {
-
+                listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, final View view,
                                             int position, long id) {
                         Intent intent = new Intent(MainActivity.this, Tasks.class);
-                         final int issueId = allIssues.get(position).getId();
-
-                        intent.putExtra("selectedIssue",issueId);
+                        final int issueId = allIssues.get(position).getId();
+                        intent.putExtra("selectedIssue", issueId);
                         startActivity(intent);
                     }
                 });

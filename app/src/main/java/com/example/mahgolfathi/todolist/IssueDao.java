@@ -24,9 +24,6 @@ public interface IssueDao {
     @Delete
     void delete(Issue issue);
 
-    @Update
-    void updateIssue (Issue issue);
-
     @Query("UPDATE Issue SET tasks=:updatedTasks WHERE id = :id")
     void update(String updatedTasks, int id);
 

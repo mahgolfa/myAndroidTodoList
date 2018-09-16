@@ -24,20 +24,21 @@ public class Tasks extends AppCompatActivity {
     private ArrayList<String> tasks = new ArrayList<String>();
     private Context context;
     private int issueId;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tasks);
         Intent intent = getIntent();
-        issueId = intent.getIntExtra("selectedIssue",0);
+        issueId = intent.getIntExtra("selectedIssue", 0);
         issueDataBase = Room.databaseBuilder(getApplicationContext(),
                 DataBase.class, DATABASE_NAME).fallbackToDestructiveMigration().build();
         context = this;
         new Thread(new Runnable() {
             @Override
             public void run() {
-                final ArrayList<String>  allTasks = Converters.fromString(issueDataBase.daoAccess().fetchIssueById(issueId).getTasks());
-                if (allTasks!= null){
+                final ArrayList<String> allTasks = Converters.fromString(issueDataBase.daoAccess().fetchIssueById(issueId).getTasks());
+                if (allTasks != null) {
                     tasks = allTasks;
                 }
                 loadTasks();
@@ -55,9 +56,9 @@ public class Tasks extends AppCompatActivity {
                 editText.setText("");
 
                 final ListView listview = (ListView) findViewById(R.id.tasksListView);
-                final ArrayList<String> list = tasks;
+
                 final StableArrayAdapter adapter = new StableArrayAdapter(context,
-                        android.R.layout.simple_list_item_1, list);
+                        android.R.layout.simple_list_item_1, tasks);
                 listview.setAdapter(adapter);
 
                 listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -70,15 +71,22 @@ public class Tasks extends AppCompatActivity {
                                 .withEndAction(new Runnable() {
                                     @Override
                                     public void run() {
-                                        list.remove(item);
-                                        adapter.notifyDataSetChanged();
+                                        tasks.remove(item);
                                         view.setAlpha(1);
+                                        adapter.notifyDataSetChanged();
+                                        new Thread(new Runnable() {
+                                            @Override
+                                            public void run() {
+                                                issueDataBase.daoAccess().fetchIssueById(issueId).setTasks(Converters.fromArrayList(tasks));
+                                                issueDataBase.daoAccess().update(Converters.fromArrayList(tasks), issueId);
+                                                tasks = Converters.fromString(issueDataBase.daoAccess().fetchIssueById(issueId).getTasks());
+                                            }}).start();
                                     }
                                 });
                     }
 
                 });
-             }
+            }
         });
 
     }
@@ -92,7 +100,7 @@ public class Tasks extends AppCompatActivity {
             @Override
             public void run() {
                 issueDataBase.daoAccess().fetchIssueById(issueId).setTasks(Converters.fromArrayList(tasks));
-                issueDataBase.daoAccess().update(Converters.fromArrayList(tasks),issueId);
+                issueDataBase.daoAccess().update(Converters.fromArrayList(tasks), issueId);
                 tasks = Converters.fromString(issueDataBase.daoAccess().fetchIssueById(issueId).getTasks());
                 loadTasks();
             }
@@ -108,9 +116,9 @@ public class Tasks extends AppCompatActivity {
                                   List<String> objects) {
             super(context, textViewResourceId, objects);
 
-                for (int i = 0; i < objects.size(); ++i) {
-                    mIdMap.put(objects.get(i), i);
-                }
+            for (int i = 0; i < objects.size(); ++i) {
+                mIdMap.put(objects.get(i), i);
+            }
 
         }
 
