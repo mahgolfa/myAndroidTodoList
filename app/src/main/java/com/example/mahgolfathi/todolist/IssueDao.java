@@ -1,6 +1,5 @@
 package com.example.mahgolfathi.todolist;
 
-
 import android.arch.persistence.room.Dao;
 import android.arch.persistence.room.Delete;
 import android.arch.persistence.room.Insert;
@@ -11,14 +10,16 @@ import java.util.List;
 @Dao
 public interface IssueDao {
 
-        @Query("SELECT * FROM issue")
-        List<com.example.mahgolfathi.todolist.Issue> getAll();
+    @Query("SELECT * FROM Issue")
+    List<Issue> getAll();
 
+    @Insert
+    void insert(Issue... issue);
 
-        @Insert
-        void insertAll(com.example.mahgolfathi.todolist.Issue... issues);
+    @Query("SELECT * FROM Issue WHERE title = :title")
+    Issue fetchOneIssueByTitle(String title);
 
-        @Delete
-        void delete(com.example.mahgolfathi.todolist.Issue issues);
+    @Delete
+    void delete(Issue issue);
 
 }

@@ -1,4 +1,5 @@
 package com.example.mahgolfathi.todolist;
+
 import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
@@ -6,29 +7,40 @@ import android.arch.persistence.room.PrimaryKey;
 import java.util.ArrayList;
 
 @Entity(tableName = "issue")
-
 public class Issue {
 
     @PrimaryKey(autoGenerate = true)
     private int id;
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     @ColumnInfo(name = "tasks")
-    private ArrayList<Task> tasks = new ArrayList<Task>();
+    private ArrayList<Task> tasksStrings = new ArrayList<Task>();
+    @ColumnInfo(name = "title")
+    private String title;
+
+    public void setTitle(String newTitle) {
+        this.title = newTitle;
+    }
+
+    public String getTitle() {
+        return title;
+    }
 
     public void addTask(String taskString) {
-         Task newTask = new Task();
-         newTask.isDone = false;
-         newTask.title = taskString;
+        Task newTask = new Task();
+        newTask.setTitle(taskString);
         this.tasks.add(newTask);
     }
 
-    private  class Task{
-      public boolean isDone ;
-      public String title ;
-    }
-
     public ArrayList<Task> getTasks() {
-       return tasks ;
+        return tasks;
     }
 
 }

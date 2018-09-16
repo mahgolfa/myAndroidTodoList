@@ -16,9 +16,8 @@ import java.util.List;
 
 public class Tasks extends AppCompatActivity {
 
-    String[] values = new String[] { "item1", "item2", "item3",
+    String[] values = new String[]{"item1", "item2", "item3",
             "item4"};
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,8 +56,7 @@ public class Tasks extends AppCompatActivity {
         });
     }
 
-    public void addTask(View v)
-    {
+    public void addTask(View v) {
         EditText editText = findViewById(R.id.textInput);
         String newTask = String.valueOf(editText.getText());
 

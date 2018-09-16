@@ -1,5 +1,6 @@
 package com.example.mahgolfathi.todolist;
 
+import android.arch.persistence.room.Room;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -15,22 +16,24 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    String[] values = new String[] { "shopping", "reading", "cooking",
-            "going"};
+    private static final String DATABASE_NAME = "issues_db";
+    private DataBase issueDataBase = Room.databaseBuilder(getApplicationContext(),
+            DataBase.class, DATABASE_NAME).fallbackToDestructiveMigration().build();
+    private List<Issue> allIssues = issueDataBase.daoAccess().getAll();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-    final ListView listview = (ListView) findViewById(R.id.issuesListView);
+        final ListView listview = (ListView) findViewById(R.id.issuesListView);
 
-    final ArrayList<String> list = new ArrayList<String>();
-        for (int i = 0; i < values.length; ++i) {
-        list.add(values[i]);
-    }
-    final StableArrayAdapter adapter = new StableArrayAdapter(this,
-            android.R.layout.simple_list_item_1, list);
+        final ArrayList<String> list = new ArrayList<String>();
+        for (int i = 0; i < allIssues.size(); i++) {
+            list.add(allIssues.get(i).getTitle());
+        }
+        final StableArrayAdapter adapter = new StableArrayAdapter(this,
+                android.R.layout.simple_list_item_1, list);
         listview.setAdapter(adapter);
 
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -41,43 +44,40 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, Tasks.class);
                 startActivity(intent);
             }
-
         });
+    }
 
-
-}
-
-    public void addIssue(View v)
-    {
+    public void addIssue(View v) {
         EditText editText = findViewById(R.id.textInput);
-        String newIssue = String.valueOf(editText.getText());
-
+        String issueTitle = String.valueOf(editText.getText());
+        Issue newIssue = new Issue();
+        newIssue.setTitle(issueTitle);
+        issueDataBase.daoAccess().insert(newIssue);
     }
 
 
-private class StableArrayAdapter extends ArrayAdapter<String> {
+    private class StableArrayAdapter extends ArrayAdapter<String> {
 
-    HashMap<String, Integer> mIdMap = new HashMap<String, Integer>();
+        HashMap<String, Integer> mIdMap = new HashMap<String, Integer>();
 
-    public StableArrayAdapter(Context context, int textViewResourceId,
-                              List<String> objects) {
-        super(context, textViewResourceId, objects);
-        for (int i = 0; i < objects.size(); ++i) {
-            mIdMap.put(objects.get(i), i);
+        public StableArrayAdapter(Context context, int textViewResourceId,
+                                  List<String> objects) {
+            super(context, textViewResourceId, objects);
+            for (int i = 0; i < objects.size(); ++i) {
+                mIdMap.put(objects.get(i), i);
+            }
         }
+
+        @Override
+        public long getItemId(int position) {
+            String item = getItem(position);
+            return mIdMap.get(item);
+        }
+
+        @Override
+        public boolean hasStableIds() {
+            return true;
+        }
+
     }
-
-    @Override
-    public long getItemId(int position) {
-        String item = getItem(position);
-        return mIdMap.get(item);
-    }
-
-    @Override
-    public boolean hasStableIds() {
-        return true;
-    }
-
-}
-
 }
